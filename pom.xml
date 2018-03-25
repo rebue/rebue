@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.rebue</groupId>
 	<artifactId>rebue</artifactId>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 	<packaging>pom</packaging>
 	<name>rebue</name>
 	<description>聚合所有rebue构件项目</description>
@@ -40,7 +40,25 @@
 
 	<profiles>
 		<profile>
-			<id>release</id>
+			<id>deploy-private</id>
+			<!-- 部署私服 -->
+			<distributionManagement>
+				<snapshotRepository>
+					<id>my-snapshots</id>
+					<name>my-snapshots</name>
+					<url>${my-snapshots.url}</url>
+					<uniqueVersion>true</uniqueVersion>
+				</snapshotRepository>
+				<repository>
+					<id>my-releases</id>
+					<name>my-releases</name>
+					<url>${my-releases.url}</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+
+		<profile>
+			<id>deploy-public</id>
 			<build>
 				<plugins>
 					<!-- 创建源码包 -->
