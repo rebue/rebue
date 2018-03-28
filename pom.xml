@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.rebue</groupId>
 	<artifactId>rebue</artifactId>
-	<version>1.0.6</version>
+	<version>1.0.7</version>
 	<packaging>pom</packaging>
 	<name>rebue</name>
 	<description>聚合所有rebue构件项目</description>
