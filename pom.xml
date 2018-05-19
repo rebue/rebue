@@ -37,10 +37,10 @@
 		<module>../robotech</module>
 		<module>../sbs</module>
 		<module>../scx</module>
+		<module>../kdi</module>
 		<module>../suc</module>
 		<module>../wxx</module>
 		<module>../afc</module>
-		<module>../kdi</module>
 	</modules>
 
 	<profiles>
