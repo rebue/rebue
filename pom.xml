@@ -31,8 +31,8 @@
 	</scm>
 
 	<modules>
-		<module>../wheel</module>
-		<module>../suc</module>
+<!-- 		<module>../wheel</module> -->
+<!-- 		<module>../suc</module> -->
 		<module>../wxx</module>
 		<module>../afc</module>
 	</modules>
