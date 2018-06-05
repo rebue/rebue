@@ -36,6 +36,8 @@
 		<module>../wheel</module>
 		<module>../robotech</module>
 		<module>../sbs</module>
+		<module>../jwt</module>
+		<module>../ise</module>
 		<module>../scx</module>
 		<module>../kdi</module>
 		<module>../suc</module>
