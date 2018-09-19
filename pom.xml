@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.rebue</groupId>
@@ -31,19 +30,21 @@
 	</scm>
 
 	<modules>
-		<module>../common-pom</module>
-		<module>../mbgx</module>
-		<module>../wheel</module>
-		<module>../robotech</module>
-		<module>../sbs</module>
-		<module>../jwt</module>
-		<module>../ise</module>
-		<module>../scx</module>
-		<module>../suc</module>
-		
-<!-- 		<module>../kdi</module> -->
-<!-- 		<module>../wxx</module> -->
-<!-- 		<module>../afc</module> -->
+		<!-- <module>../common-pom</module> -->
+		<!-- <module>../mbgx</module> -->
+		<!-- <module>../wheel</module> -->
+		<!-- <module>../robotech</module> -->
+		<!-- <module>../sbs</module> -->
+		<!-- <module>../jwt</module> -->
+		<!-- <module>../ise</module> -->
+		<!-- <module>../scx</module> -->
+		<!-- <module>../suc</module> -->
+		<!-- <module>../pfm</module> -->
+		<!-- <module>../wxx</module> -->
+		<!-- <module>../afc</module> -->
+		<module>../rna</module>
+		<!-- <module>../kdi</module> -->
+		<!-- <module>../ord</module> -->
 	</modules>
 
 	<profiles>
