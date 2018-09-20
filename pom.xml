@@ -30,21 +30,22 @@
 	</scm>
 
 	<modules>
-		<!-- <module>../common-pom</module> -->
-		<!-- <module>../mbgx</module> -->
-		<!-- <module>../wheel</module> -->
-		<!-- <module>../robotech</module> -->
-		<!-- <module>../sbs</module> -->
-		<!-- <module>../jwt</module> -->
-		<!-- <module>../ise</module> -->
-		<!-- <module>../scx</module> -->
-		<!-- <module>../suc</module> -->
-		<!-- <module>../pfm</module> -->
-		<!-- <module>../wxx</module> -->
-		<!-- <module>../afc</module> -->
+		<module>../common-pom</module>
+		<module>../mbgx</module>
+		<module>../wheel</module>
+		<module>../robotech</module>
+		<module>../sbs</module>
+		<module>../jwt</module>
+		<module>../ise</module>
+		<module>../scx</module>
+		<module>../suc</module>
+		<module>../pfm</module>
+		<module>../wxx</module>
+		<module>../afc</module>
 		<module>../rna</module>
-		<!-- <module>../kdi</module> -->
-		<!-- <module>../ord</module> -->
+		<module>../kdi</module>
+		<module>../onl</module>
+		<module>../ord</module>
 	</modules>
 
 	<profiles>
