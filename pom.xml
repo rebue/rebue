@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.rebue</groupId>
 	<artifactId>rebue</artifactId>
-	<version>1.0.8</version>
+	<version>1.0.9</version>
 	<packaging>pom</packaging>
 	<name>rebue</name>
 	<description>聚合所有rebue构件项目</description>
@@ -36,15 +36,17 @@
 		<module>../robotech</module>
 		<module>../sbs</module>
 		<module>../jwt</module>
-		<module>../ise</module>
 		<module>../scx</module>
+		<module>../hlw</module>
+		<module>../ise</module>
 		<module>../suc</module>
 		<module>../pfm</module>
 		<module>../wxx</module>
 		<module>../afc</module>
+		<module>../pnt</module>
+		<module>../kdi</module>
 		<module>../prm</module>
 		<module>../rna</module>
-		<module>../kdi</module>
 		<module>../onl</module>
 		<module>../ord</module>
 	</modules>
