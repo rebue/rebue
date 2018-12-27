@@ -30,23 +30,26 @@
 	</scm>
 
 	<modules>
+		<module>../archetype</module>
 		<module>../common-pom</module>
 		<module>../mbgx</module>
 		<module>../wheel</module>
-		<module>../robotech</module>
 		<module>../sbs</module>
-		<module>../jwt</module>
 		<module>../scx</module>
+		<module>../robotech</module>
 		<module>../hlw</module>
+		<module>../jwt</module>
 		<module>../ise</module>
+		<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 上面的项目可以部署到maven中央仓库 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+		<module>../wxx</module>
+		<module>../damai</module>
 		<module>../suc</module>
 		<module>../pfm</module>
-		<module>../wxx</module>
 		<module>../afc</module>
 		<module>../pnt</module>
 		<module>../kdi</module>
-		<module>../prm</module>
 		<module>../rna</module>
+		<module>../prm</module>
 		<module>../onl</module>
 		<module>../ord</module>
 	</modules>
@@ -72,6 +75,18 @@
 
 		<profile>
 			<id>deploy-public</id>
+			<!-- 部署中央仓库 -->
+			<distributionManagement>
+				<snapshotRepository>
+					<id>oss</id>
+					<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+				</snapshotRepository>
+				<repository>
+					<id>oss</id>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+				</repository>
+			</distributionManagement>
+
 			<build>
 				<plugins>
 					<!-- 创建源码包 -->
@@ -91,10 +106,20 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>3.0.0</version>
-						<!-- <configuration> -->
-						<!-- <doclint>none</doclint> -->
-						<!-- </configuration> -->
+						<version>3.0.1</version>
+						<configuration>
+							<!-- 不检查JavaDoc规范 -->
+							<!-- <doclint>none</doclint> -->
+							<!-- <additionalparam>-Xdoclint:none</additionalparam> -->
+							<tags>
+								<tag>
+									<name>mbg.generated</name>
+									<!-- todo tag for all places -->
+									<placement>a</placement>
+									<head>mybatis自动生成的代码</head>
+								</tag>
+							</tags>
+						</configuration>
 					</plugin>
 					<!-- 部署时用GPG数字签名 -->
 					<plugin>
@@ -111,18 +136,6 @@
 					</plugin>
 				</plugins>
 			</build>
-
-			<!-- 部署中央仓库 -->
-			<distributionManagement>
-				<snapshotRepository>
-					<id>oss</id>
-					<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-				</snapshotRepository>
-				<repository>
-					<id>oss</id>
-					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-				</repository>
-			</distributionManagement>
 		</profile>
 	</profiles>
 </project>
