@@ -37,21 +37,21 @@
 		<module>../sbs</module>
 		<module>../scx</module>
 		<module>../robotech</module>
-		<module>../hlw</module>
-		<module>../jwt</module>
-		<module>../ise</module>
 		<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 上面的项目可以部署到maven中央仓库 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
-		<module>../wxx</module>
-		<module>../damai</module>
-		<module>../suc</module>
-		<module>../pfm</module>
-		<module>../afc</module>
-		<module>../pnt</module>
-		<module>../kdi</module>
-		<module>../rna</module>
-		<module>../prm</module>
-		<module>../onl</module>
-		<module>../ord</module>
+		<!-- <module>../hlw</module> -->
+		<!-- <module>../jwt</module> -->
+		<!-- <module>../ise</module> -->
+		<!-- <module>../wxx</module> -->
+		<!-- <module>../damai</module> -->
+		<!-- <module>../suc</module> -->
+		<!-- <module>../pfm</module> -->
+		<!-- <module>../afc</module> -->
+		<!-- <module>../pnt</module> -->
+		<!-- <module>../kdi</module> -->
+		<!-- <module>../rna</module> -->
+		<!-- <module>../prm</module> -->
+		<!-- <module>../onl</module> -->
+		<!-- <module>../ord</module> -->
 	</modules>
 
 	<profiles>
