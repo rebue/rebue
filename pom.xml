@@ -36,14 +36,14 @@
 	<modules>
 		<module>../archetype</module>
 		<module>../common-pom</module>
-		<module>../mbgx</module>
+<!-- 		<module>../mbgx</module> -->
 		<module>../wheel</module>
 		<module>../sbs</module>
 		<module>../jwt</module>
 		<module>../scx</module>
-		<module>../robotech</module>
+<!-- 		<module>../robotech</module> -->
 		<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 上面的项目可以部署到maven中央仓库 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
-		<!-- <module>../hlw</module> -->
+		<module>../hlw</module>
 		<!-- <module>../ise</module> -->
 		<!-- <module>../wxx</module> -->
 		<!-- <module>../damai</module> -->
