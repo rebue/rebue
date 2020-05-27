@@ -1,5 +1,0 @@
-jwt:
-  # 因为算法为HS512，所以至少需要有512个bit，也就是64个Byte
-  key: ABCabc123ABCabc123ABCabc123ABCabc123ABCabc123ABCabc123ABCabc123ABCabc123
-  # 签发者
-  iss: ZBOSS

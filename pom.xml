@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.rebue</groupId>
 	<artifactId>rebue</artifactId>
-	<version>1.0.9</version>
+	<version>1.2.0</version>
 	<packaging>pom</packaging>
 	<name>rebue</name>
 	<description>聚合所有rebue构件项目</description>
@@ -36,13 +36,13 @@
 	<modules>
 		<module>../archetype</module>
 		<module>../common-pom</module>
-<!-- 		<module>../mbgx</module> -->
 		<module>../wheel</module>
+		<module>../mbgx</module>
+		<module>../robotech</module>
 		<module>../sbs</module>
-		<module>../jwt</module>
 		<module>../scx</module>
-<!-- 		<module>../robotech</module> -->
-		<!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ 上面的项目可以部署到maven中央仓库 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+		<!-- ↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟ 上面的项目可以部署到maven中央仓库 ↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟ -->
+		<!-- ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ 下面的项目是微服务项目 ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ -->
 		<module>../hlw</module>
 		<!-- <module>../ise</module> -->
 		<!-- <module>../wxx</module> -->
