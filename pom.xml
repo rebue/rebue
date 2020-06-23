@@ -1,6 +1,11 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.0.RELEASE</version>
+    </parent>
     <groupId>com.github.rebue</groupId>
     <artifactId>rebue</artifactId>
     <version>1.2.0</version>
@@ -40,115 +45,111 @@
         <module>../mbgx</module>
         <module>../robotech</module>
         <module>../sbs</module>
+        <!-- ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ 上面的项目可以部署到maven中央仓库 ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ -->
+        <!-- ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ 下面的项目是微服务项目 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ -->
+        <module>../hlw</module>
         <module>../scx</module>
-        <!-- ↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟ 上面的项目可以部署到maven中央仓库 ↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟↟ -->
-        <!-- ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ 下面的项目是微服务项目 ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ ↡ -->
-        <!-- <module>../hlw</module> -->
         <!-- <module>../ise</module> -->
         <!-- <module>../wxx</module> -->
-        <!-- <module>../damai</module> -->
-        <!-- <module>../suc</module> -->
-        <!-- <module>../pfm</module> -->
-        <!-- <module>../afc</module> -->
-        <!-- <module>../pnt</module> -->
-        <!-- <module>../kdi</module> -->
-        <!-- <module>../rna</module> -->
-        <!-- <module>../prm</module> -->
-        <!-- <module>../onl</module> -->
-        <!-- <module>../ord</module> -->
     </modules>
 
-    <profiles>
-        <profile>
-            <id>deploy-private</id>
-            <!-- 部署私服 -->
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>my-snapshots</id>
-                    <name>my-snapshots</name>
-                    <url>${my-snapshots.url}</url>
-                    <uniqueVersion>true</uniqueVersion>
-                </snapshotRepository>
-                <repository>
-                    <id>my-releases</id>
-                    <name>my-releases</name>
-                    <url>${my-releases.url}</url>
-                </repository>
-            </distributionManagement>
-        </profile>
+    <build>
+        <plugins>
+<!--            &lt;!&ndash; 创建源码包 &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-source-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>jar-no-fork</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
 
-        <profile>
-            <id>deploy-public</id>
-            <!-- 部署中央仓库 -->
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-                </snapshotRepository>
-                <repository>
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-            </distributionManagement>
+<!--            &lt;!&ndash; 创建文档包 &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                <version>${maven-javadoc-plugin.version}</version>-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash; 不检查JavaDoc规范 &ndash;&gt;-->
+<!--                    &lt;!&ndash; <doclint>none</doclint> &ndash;&gt;-->
+<!--                    &lt;!&ndash; <additionalparam>-Xdoclint:none</additionalparam> &ndash;&gt;-->
+<!--                    <tags>-->
+<!--                        <tag>-->
+<!--                            <name>mbg.generated</name>-->
+<!--                            &lt;!&ndash; todo tag for all places &ndash;&gt;-->
+<!--                            <placement>a</placement>-->
+<!--                            <head>mybatis自动生成的代码</head>-->
+<!--                        </tag>-->
+<!--                    </tags>-->
+<!--                </configuration>-->
+<!--                &lt;!&ndash; javadoc插件默认不运行，要绑定到MAven的生命周期阶段中 &ndash;&gt;-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>jar</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+        </plugins>
+    </build>
 
-            <build>
-                <plugins>
-                    <!-- 创建源码包 -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!-- 创建文档包 -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${maven-javadoc-plugin.version}</version>
-                        <configuration>
-                            <!-- 不检查JavaDoc规范 -->
-                            <!-- <doclint>none</doclint> -->
-                            <!-- <additionalparam>-Xdoclint:none</additionalparam> -->
-                            <tags>
-                                <tag>
-                                    <name>mbg.generated</name>
-                                    <!-- todo tag for all places -->
-                                    <placement>a</placement>
-                                    <head>mybatis自动生成的代码</head>
-                                </tag>
-                            </tags>
-                        </configuration>
-                        <!-- javadoc插件默认不运行，要绑定到MAven的生命周期阶段中 -->
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!-- 部署时用GPG数字签名 -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>deploy-private</id>-->
+<!--            &lt;!&ndash; 部署私服 &ndash;&gt;-->
+<!--            <distributionManagement>-->
+<!--                <snapshotRepository>-->
+<!--                    <id>my-snapshots</id>-->
+<!--                    <name>my-snapshots</name>-->
+<!--                    <url>${my-snapshots.url}</url>-->
+<!--                    <uniqueVersion>true</uniqueVersion>-->
+<!--                </snapshotRepository>-->
+<!--                <repository>-->
+<!--                    <id>my-releases</id>-->
+<!--                    <name>my-releases</name>-->
+<!--                    <url>${my-releases.url}</url>-->
+<!--                </repository>-->
+<!--            </distributionManagement>-->
+<!--        </profile>-->
+
+<!--        <profile>-->
+<!--            <id>deploy-public</id>-->
+<!--            &lt;!&ndash; 部署中央仓库 &ndash;&gt;-->
+<!--            <distributionManagement>-->
+<!--                <snapshotRepository>-->
+<!--                    <id>oss</id>-->
+<!--                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>-->
+<!--                </snapshotRepository>-->
+<!--                <repository>-->
+<!--                    <id>oss</id>-->
+<!--                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+<!--                </repository>-->
+<!--            </distributionManagement>-->
+
+<!--            <build>-->
+<!--                <plugins>-->
+<!--                    &lt;!&ndash; 部署时用GPG数字签名 &ndash;&gt;-->
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-gpg-plugin</artifactId>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <phase>verify</phase>-->
+<!--                                <goals>-->
+<!--                                    <goal>sign</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
+<!--                </plugins>-->
+<!--            </build>-->
+<!--        </profile>-->
+<!--    </profiles>-->
 </project>
