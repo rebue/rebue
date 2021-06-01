@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.rebue</groupId>
 	<artifactId>rebue</artifactId>
-	<version>1.2.2</version>
+	<version>1.2.3</version>
 	<packaging>pom</packaging>
 
 	<name>rebue</name>
@@ -21,7 +21,7 @@
 		<module>../common-pom/sb-dependencies/sb-parent</module>
 		<!-- ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ 上面的项目可以部署到maven中央仓库 ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ -->
 		<!-- ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ 下面的项目是微服务项目 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ -->
-<!-- 		<module>../hlw</module> -->
+		<!-- <module>../hlw</module> -->
 		<module>../scx</module>
 		<!-- <module>../ise</module> -->
 		<!-- <module>../wxx</module> -->
