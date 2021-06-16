@@ -18,11 +18,12 @@
 		<module>../robotech</module>
 		<module>../common-pom/sb-dependencies</module>
 		<module>../sbs</module>
-		<module>../common-pom/sb-dependencies/sb-parent</module>
+		<!-- <module>../common-pom/sb-dependencies/sb-parent</module> -->
 		<!-- ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ 上面的项目可以部署到maven中央仓库 ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ -->
 		<!-- ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ 下面的项目是微服务项目 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ -->
 		<!-- <module>../hlw</module> -->
 		<module>../scx</module>
+		<module>../csa/prj/csa</module>
 		<!-- <module>../ise</module> -->
 		<!-- <module>../wxx</module> -->
 	</modules>
