@@ -23,8 +23,6 @@
 		<!-- ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ 下面的项目是微服务项目 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ -->
 		<!-- <module>../hlw</module> -->
 		<module>../scx</module>
-		<!-- <module>../ise</module> -->
-		<!-- <module>../wxx</module> -->
 	</modules>
 
 	<profiles>
