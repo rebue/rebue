@@ -22,7 +22,7 @@
 		<!-- ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ 上面的项目可以部署到maven中央仓库 ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ -->
 		<!-- ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ 下面的项目是微服务项目 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ -->
 		<!-- <module>../hlw</module> -->
-		<module>../scx</module>
+		<!-- <module>../scx</module> -->
 	</modules>
 
 	<profiles>
@@ -64,13 +64,20 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.6</version>
+						<version>3.0.1</version>
 						<executions>
 							<execution>
+								<id>sign-artifacts</id>
 								<phase>verify</phase>
 								<goals>
 									<goal>sign</goal>
 								</goals>
+								<configuration>
+									<!-- 指定密钥的名称(可能会有多个生成的密钥) -->
+									<keyname>${gpg.keyname}</keyname>
+									<!-- 如果gpg服务有密钥，在settings.xml文件中配置 -->
+									<passphraseServerId>gpg</passphraseServerId>
+								</configuration>
 							</execution>
 						</executions>
 					</plugin>
