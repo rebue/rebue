@@ -5,3 +5,4 @@ target
 logs
 pom.xml.versionsBackup
 *.iml
+.idea
