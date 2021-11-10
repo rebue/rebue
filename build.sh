@@ -1,5 +1,4 @@
-$(cd `dirname $0`; pwd)
-
+cd $(cd "$(dirname "$0")";pwd)
 cd ../archetype/
 mvn clean install -DskipTests
 cd ../common-pom/
@@ -18,7 +17,3 @@ cd ../common-pom/sb-dependencies/sb-parent
 mvn clean install -DskipTests
 cd ../../../scx/
 mvn clean install -DskipTests
-
-
-
-
