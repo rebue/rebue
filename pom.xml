@@ -19,6 +19,8 @@
 		<module>../common-pom/sb-dependencies</module>
 		<module>../sbs</module>
 		<module>../common-pom/sb-dependencies/sb-parent</module>
+		<!-- 微服务 -->
+		<module>../scx</module>
 	</modules>
 
 	<profiles>
