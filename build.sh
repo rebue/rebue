@@ -30,6 +30,6 @@ mvn clean install -DskipTests
 #cd $ROOT_DIR/scx/orp/orp-core/libs/
 #pwd
 #mvn install:install-file -Dfile=taobao-sdk-java-auto_1479188381469-20210908.jar -DgroupId=com.dingtalk.open -DartifactId=taobao-sdk-java-auto -Dversion=20210908 -Dpackaging=jar
-#cd $ROOT_DIR/scx/
-#pwd
-#mvn clean install -DskipTests
+cd $ROOT_DIR/scx/
+pwd
+mvn clean install -DskipTests
