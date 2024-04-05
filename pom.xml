@@ -28,17 +28,12 @@
     </scm>
 
     <modules>
-        <!--		<module>../archetype</module>-->
-        <!--		<module>../common-pom</module>-->
+        <module>../archetype</module>
         <module>../wheel</module>
         <module>../mbgx</module>
         <module>../robotech</module>
-        <!--		<module>../common-pom/sb-dependencies</module>-->
         <module>../sbs</module>
-        <!--		<module>../common-pom/sb-dependencies/sb-parent</module>-->
         <!--		<module>../scx</module>-->
-        <!--		<module>../../unipay/up</module>-->
-        <!--		<module>../../unipay/upa</module>-->
     </modules>
 
     <profiles>
