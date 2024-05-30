@@ -8,6 +8,15 @@
     <name>rebue</name>
     <description>聚合所有rebue构件项目</description>
 
+    <modules>
+        <module>../archetype</module>
+        <module>../wheel</module>
+        <module>../mbgx</module>
+        <module>../robotech</module>
+        <module>../sbs</module>
+<!--        <module>../scx</module>-->
+    </modules>
+
     <url>https://github.com/rebue/rebue</url>
     <developers>
         <developer>
@@ -26,15 +35,6 @@
         <developerConnection>scm:git:https://github.com/rebue/rebue.git</developerConnection>
         <url>https://github.com/rebue/rebue.git</url>
     </scm>
-
-    <modules>
-        <module>../archetype</module>
-        <module>../wheel</module>
-        <module>../mbgx</module>
-        <module>../robotech</module>
-        <module>../sbs</module>
-        <module>../scx</module>
-    </modules>
 
     <profiles>
         <profile>
