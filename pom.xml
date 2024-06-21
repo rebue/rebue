@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.rebue</groupId>
     <artifactId>rebue</artifactId>
-    <version>3.5.36</version>
+    <version>3.5.37</version>
     <packaging>pom</packaging>
     <name>rebue</name>
     <description>聚合所有rebue构件项目</description>
@@ -14,7 +14,7 @@
         <module>../mbgx</module>
         <module>../robotech</module>
         <module>../sbs</module>
-<!--        <module>../scx</module>-->
+        <module>../scx</module>
     </modules>
 
     <url>https://github.com/rebue/rebue</url>
