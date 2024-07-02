@@ -6,3 +6,4 @@ logs
 pom.xml.versionsBackup
 *.iml
 .idea
+.run
